@@ -46,9 +46,13 @@ table {
 include ("header.php");
 include ("topnav.php");
 ?>
-<div id="mainbody">
-<form action="quiz_process.php" method="POST"
-	<div id="title"><p>Create Question Form</p>
+<!-- <div id="mainbody"> -->
+<main class="flex-shrink-0">
+        <div class="container">
+            <div class="card p-5 my-5">
+                <h1 class="p-5 bg-dark text-white rounded">Create Question Form</h1>
+                <br>
+<form action="quiz_process.php" method="POST">
 <table cellpadding=5px>
 <tr>
 	<td style="width: 20px"></td>
@@ -94,7 +98,10 @@ include ("topnav.php");
 </tr>
 </table>
 </form>
-</div>
+<!-- </div> -->
+			</div>
+		</div>
+</main>
 <?php
 include ("footer.php");
 ?>

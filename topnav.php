@@ -5,7 +5,7 @@ include('session.php');
 <html>
 <head>
 <style>
-ul {
+/* ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -34,8 +34,17 @@ li a:hover, .dropdown:hover .dropbtn {
 li.dropdown {
 	display: inline-block;
 	float:right;
-}
+} */
 
+#user {
+	display: inline-block;
+	/* float: right; */
+	font-size:small;
+	height: 50px;
+}
+#registerBtn {
+	float: right;
+}
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -73,32 +82,56 @@ li.dropdown {
 </head>
 <body>
 
-<ul>
+<!-- <ul>
 	<li><a href="quiz_collection.php">Home</a></li>
 	<li class="dropdown">
-	<a href="#" class="dropbtn">Hye, <?php echo $name; ?></a>
+	<a href="#" class="dropbtn">Hye,</a>
 		<div class="dropdown-content">
-		<!-- different menus for different users -->
-		<?php
-			if ($cat == "T") // Teacher
-			{
-				$menu1='<a href="quiz_collection.php">Quiz Collection</a>';
-				$menu2='<a href="quiz_form.php">Add Quiz</a>';
-				$menu3='<a href="student_performance.php">Student Performance</a>';
-			}
-			else // Student
-			{
-				$menu1='<a href="quiz_collection.php">Quiz Collection</a>';
-				$menu2='<a href="student_performance2.php">Performance</a>';
-				$menu3='';
-			}
-		echo $menu1;
-		echo $menu2;
-		echo $menu3;
-		?>
+		different menus for different users
 		<a href="logout.php">Log Out</a>
 		</div>
 	</li>
-</ul>
+</ul> -->
+<nav class="px-3 py-2 bg-white border-bottom mb-3">
+            <div class="container-fluid d-flex flex-wrap justify-content-center">
+                <ul class="nav col-md-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto text-small">
+					<?php if ($cat == "T") {?>
+                    <li>
+                        <a href="quiz_collection.php" class="nav-link text-dark">
+						Quiz Collection
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quiz_form.php" class="nav-link text-dark">
+						Quiz Form
+                        </a>
+                    </li>
+                    <li>
+                        <a href="student_performance.php" class="nav-link text-dark">
+						Student Performance
+                        </a>
+                    </li>
+					<li>
+					<a href="registration_form.php" class="nav-link text-dark">Register for Teacher</a>
+					</li>
+					<li>
+					<a href="registration_form2.php" class="nav-link text-dark">Register for Student</a>
+					</li>
+					<?php } else { ?>
+                    <li>
+                        <a href="quiz_collection.php" class="nav-link text-dark">
+						Quiz Collection
+                        </a>
+                    </li>
+                    <li>
+                        <a href="student_performance2.php" class="nav-link text-dark">
+						Performance
+                        </a>
+                    </li>
+					<?php } ?>
+                </ul>
+				<div class="alert alert-success" role="alert" id="user">Hye <?php echo $name.' !'; ?></div>
+            </div>
+        </nav>
 </body>
 </html>

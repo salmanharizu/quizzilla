@@ -30,7 +30,7 @@ if (mysqli_num_rows($result) > 0)
 	// show js popup message if new user successfully registers
 	echo '<script>
 		alert("Successfully Registered New User!");
-		window.location.href="index.php";</script>';
+		window.location.href="registration_form.php";</script>';
 		// after successfully registering, return to the login page
 	} else {
 		echo "Error ; " . mysql_error($conn); }

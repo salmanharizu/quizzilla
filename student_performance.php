@@ -54,8 +54,13 @@ th {
 include ("header.php");
 include ("topnav.php");
 ?>
-<div id="mainbody">
-	<div id="title"><p>Student Performance</p></div>
+<!-- <div id="mainbody">
+	<div id="title"><p>Student Performance</p></div> -->
+	<main class="flex-shrink-0">
+        <div class="container">
+            <div class="card p-5 my-5">
+                <h1 class="p-5 bg-dark text-white rounded">Student Performance</h1>
+                <br>
 
 <form action="" method="post">
 <p><center>
@@ -157,8 +162,11 @@ else { echo "<center>No record</center>"; }
 			   onclick="window.location.href='notify_email.php';"
 			   value="Notify Email"></td>
 </tr>
-</div>
-
+</table>
+<!-- </div> -->
+			</div>
+		</div>
+	</main>
 <?php
 include ("footer.php");
 ?>

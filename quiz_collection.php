@@ -19,12 +19,12 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	border-collapse: collapse;
-	margin: auto
+	margin: auto;
 	background-color: lavender;
 }
 
 td {
-	text align: left;
+	text-align: left;
 	height: 25px;
 }
 
@@ -44,9 +44,13 @@ th {
 include ("header.php");
 include ("topnav.php");
 ?>
-<div id="mainbody">
-	<div id="title"><p>Quiz Collection</p></div>
-
+<!-- <div id="mainbody">
+	<div id="title"><p>Quiz Collection</p></div> -->
+	<main class="flex-shrink-0">
+        <div class="container">
+            <div class="card p-5 my-5">
+                <h1 class="p-5 bg-dark text-white rounded">Quiz Collection</h1>
+                <br>
 <form action="" method="post">
 <!-- SEARCH -->
 <p><center>Find Quiz :
@@ -116,7 +120,10 @@ echo "</table>";
 }
 else { echo "<center>The quiz doesn't exist yet</center>"; }
 ?>
-</div>
+<!-- </div> -->
+			</div>
+		</div>
+	</main>
 <?php
 include ("footer.php");
 ?>

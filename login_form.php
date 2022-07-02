@@ -15,7 +15,7 @@
         <div class="login-content">
             <form action="login_process.php" method="POST">
                 <img src="img/avatar1.svg">
-                <h2 class="title">Welcome to QUIZZILA</h2>
+                <h2 class="title">Welcome to QUIZZILLA</h2>
                    <div class="input-div one">
                       <div class="i">
                               <i class="fas fa-user"></i>
@@ -46,8 +46,8 @@
                 </label>
                 </div>
                 
-                <a href="registration_form.php">Register for Teacher</a>
-                <a href="registration_form2.php">Register for Student</a>
+                <!-- <a href="registration_form.php">Register for Teacher</a>
+                <a href="registration_form2.php">Register for Student</a> -->
                 <input type="submit" class="btn" value="Login">
             </form>
         </div>
